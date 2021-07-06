@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Header from './components/Header';
 
 // url for movie info
 // I tried to hide de api key using ${REACT_APP_TMDB_API_KEY} instead of the key
@@ -25,19 +26,23 @@ const App = () => {
 	}, []);
 
 	return (
-		<div>
-			{movie.map((peli) => {
+		<>
+			<Header />
+			{movie.map((film) => {
 				return (
-					<div key={peli.id}>
-						<img src={movieImage + peli.poster_path} alt='' />
-						<div>{peli.original_title}</div>
-						<div>{peli.year}</div>
-						<div>{peli.vote_average}</div>
-						<div>{peli.vote_count}</div>
+					<div key={film.id}>
+						<img
+							src={movieImage + film.poster_path}
+							alt={film.original_title}
+						/>
+						<div>{film.original_title}</div>
+						<div>{film.year}</div>
+						<div>{film.vote_average}</div>
+						<div>{film.vote_count}</div>
 					</div>
 				);
 			})}
-		</div>
+		</>
 	);
 };
 
