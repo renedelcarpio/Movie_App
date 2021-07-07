@@ -23,9 +23,10 @@ const FilmContainer = styled.div`
 
 const Movie = styled.div`
 	display: flex;
+	position: relative;
+	overflow: hidden;
 	flex-wrap: wrap;
 	width: 15rem;
-	height: 20rem;
 	margin: 1rem;
 	margin-bottom: 6rem;
 
@@ -43,6 +44,23 @@ const Movie = styled.div`
 const Image = styled.img`
 	width: 100%;
 	border-radius: 1rem;
+`;
+
+const InfoContainer = styled.div`
+	background-color: ${theme.black};
+	opacity: 0.5;
+	height: 6rem;
+	position: absolute;
+	padding: 1rem;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(100%);
+
+	${Movie}:hover & {
+		transform: translateY(0%);
+		transition: 0.3s;
+	}
 `;
 
 const Info = styled.h3`
@@ -80,4 +98,4 @@ const GenresTitle = styled.h2`
 	}
 `;
 
-export { FilmContainer, Movie, Image, Info, GenresTitle };
+export { FilmContainer, Movie, Image, Info, GenresTitle, InfoContainer };
