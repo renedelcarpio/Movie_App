@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import { FilmContainer, Movie, Image, Info } from './elements';
 
-const trendingUrl = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_TMDB_API_KEY}`;
+const trendingUrl = `
+https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US`;
 
 const movieImage = 'https://image.tmdb.org/t/p/w154';
 
-const TrendingMovie = () => {
-	const [trending, setTrending] = useState([]);
+const GenresMovie = () => {
+	const [genres, setGenres] = useState([]);
 
 	useEffect(() => {
 		fetch(trendingUrl)
 			.then((response) => response.json())
 			.then((data) => {
 				console.log(data);
-				setTrending(data.results);
+				setGenres(data.genres);
 			});
 	}, []);
 
 	return (
 		<FilmContainer>
-			{trending.map((film) => {
+			{genres.map((film) => {
 				return (
 					<Movie key={film.id}>
 						<Image
 							src={movieImage + film.poster_path}
 							alt={film.original_title}
 						/>
-						<Info>{film.original_title}</Info>
+						<Info>{film.name}</Info>
 					</Movie>
 				);
 			})}
@@ -34,4 +35,4 @@ const TrendingMovie = () => {
 	);
 };
 
-export default TrendingMovie;
+export default GenresMovie;

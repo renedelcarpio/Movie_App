@@ -17,6 +17,7 @@ const FilmContainer = styled.div`
 		width: 100%;
 		height: 22rem;
 		justify-content: center;
+		margin-bottom: 1rem;
 	}
 `;
 
@@ -56,14 +57,26 @@ const Info = styled.h3`
 `;
 
 const GenresTitle = styled.h2`
-	margin-left: 8rem;
-	margin-bottom: 1.5rem;
-	font-size: 1.8rem;
+	margin-left: 12rem;
+	font-size: 1.5rem;
+	font-weight: bold;
 	color: ${theme.white};
 
+	@media (max-width: 1025px) {
+		margin-left: 8rem;
+	}
+
 	@media (max-width: 800px) {
-		margin-left: 2rem;
+		margin-left: 4rem;
 		font-size: 1.2rem;
+	}
+
+	@media (max-width: 450px) {
+		margin-left: 5rem;
+	}
+
+	@media (max-width: 376px) {
+		margin-left: 8rem;
 	}
 `;
 

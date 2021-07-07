@@ -1,18 +1,20 @@
 import React from 'react';
 import Header from './components/Header';
-import MyListMovie from './components/MyListMovie';
-import TrendingMovie from './components/TrendingMovie';
 import { GenresTitle } from './components/elements';
+import GenresMovie from './components/GenresMovie';
+import MyListMovie from './components/MyListMovie';
+import PopularMovie from './components/PopularMovie';
 import ComingSoon from './components/ComingSoon';
 
 const App = () => {
 	return (
 		<>
 			<Header />
+			<GenresMovie />
 			<GenresTitle>My List</GenresTitle>
-			<TrendingMovie />
-			<GenresTitle>Popular</GenresTitle>
 			<MyListMovie />
+			<GenresTitle>Popular</GenresTitle>
+			<PopularMovie />
 			<GenresTitle>Coming Soon</GenresTitle>
 			<ComingSoon />
 		</>
