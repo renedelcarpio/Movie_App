@@ -1,24 +1,25 @@
 import React from 'react';
-import Header from './components/Header';
-import { GenresTitle } from './components/elements';
-import GenresMovie from './components/GenresMovie';
-import MyListMovie from './components/MyListMovie';
-import PopularMovie from './components/PopularMovie';
-import ComingSoon from './components/ComingSoon';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Kids from './pages/Kids';
+import Movies from './pages/Movies';
+import NotFound from './pages/NotFound';
+import Series from './pages/Series';
 
-const App = () => {
+function App() {
 	return (
-		<>
-			<Header />
-			<GenresMovie />
-			<GenresTitle>My List</GenresTitle>
-			<MyListMovie />
-			<GenresTitle>Popular</GenresTitle>
-			<PopularMovie />
-			<GenresTitle>Coming Soon</GenresTitle>
-			<ComingSoon />
-		</>
+		<BrowserRouter>
+			<Layout>
+				<Switch>
+					<Route exact path='/' component={Home} />
+					<Route exact path='/Movies' component={Movies} />
+					<Route exact path='/Series' component={Series} />
+					<Route exact path='/Kids' component={Kids} />
+					<Route exact path='' component={NotFound} />
+				</Switch>
+			</Layout>
+		</BrowserRouter>
 	);
-};
-
+}
 export default App;

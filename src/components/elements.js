@@ -1,6 +1,34 @@
 import styled from 'styled-components';
 import theme from '../theme';
 
+// Header elements
+const Navbar = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 1rem;
+`;
+
+const Menu = styled.ul`
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	width: 15%;
+	justify-content: space-around;
+`;
+
+const Items = styled.li`
+	font-size: 1.3rem;
+	color: ${theme.white};
+
+	:hover {
+		transform: scale(1.2);
+		transition: 300ms ease-in-out;
+		cursor: pointer;
+	}
+`;
+
+// Home page elements
 const FilmContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
@@ -98,4 +126,39 @@ const GenresTitle = styled.h2`
 	}
 `;
 
-export { FilmContainer, Movie, Image, Info, GenresTitle, InfoContainer };
+const HeroContainer = styled.div`
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 70rem;
+`;
+
+const HeroImage = styled.img`
+	width: 100%;
+	background-color: ${theme.green};
+	background-image: linear-gradient(transparent, black);
+`;
+
+const HeroInfo = styled.div`
+	position: absolute;
+	width: 50rem;
+	height: 18rem;
+	margin-top: 20rem;
+	margin-left: 10rem;
+	border: 2px solid ${theme.white};
+`;
+
+export {
+	FilmContainer,
+	Movie,
+	Image,
+	Info,
+	GenresTitle,
+	InfoContainer,
+	HeroContainer,
+	HeroImage,
+	HeroInfo,
+	Navbar,
+	Menu,
+	Items,
+};

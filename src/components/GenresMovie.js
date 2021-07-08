@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FilmContainer, Movie, Image, Info } from './elements';
 
-const trendingUrl = `
+const url = `
 https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US`;
 
 const movieImage = 'https://image.tmdb.org/t/p/w154';
@@ -10,7 +10,7 @@ const GenresMovie = () => {
 	const [genres, setGenres] = useState([]);
 
 	useEffect(() => {
-		fetch(trendingUrl)
+		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
 				console.log(data);
