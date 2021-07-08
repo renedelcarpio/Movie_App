@@ -148,6 +148,13 @@ const HeroInfo = styled.div`
 	border: 2px solid ${theme.white};
 `;
 
+//movies, series, kids container
+const PageContainer = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+`;
+
 export {
 	FilmContainer,
 	Movie,
@@ -161,4 +168,5 @@ export {
 	Navbar,
 	Menu,
 	Items,
+	PageContainer,
 };

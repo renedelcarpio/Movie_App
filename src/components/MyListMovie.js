@@ -21,7 +21,7 @@ const MyListMovie = () => {
 		<FilmContainer>
 			{myList.map((film) => {
 				return (
-					<Movie className='aparece' key={film.id}>
+					<Movie key={film.id}>
 						<Image
 							src={movieImage + film.poster_path}
 							alt={film.original_title}
