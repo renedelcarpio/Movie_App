@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Menu, Items } from './elements';
-import Search from './Search';
 import { MenuItems } from './menuItems';
 
 const Header = () => {
@@ -16,7 +15,6 @@ const Header = () => {
 					);
 				})}
 			</Menu>
-			<Search />
 		</Navbar>
 	);
 };

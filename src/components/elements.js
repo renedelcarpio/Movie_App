@@ -6,6 +6,7 @@ const Navbar = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 	padding: 1rem;
 `;
 
@@ -15,16 +16,48 @@ const Menu = styled.ul`
 	list-style: none;
 	width: 15%;
 	justify-content: space-around;
+
+	@media (max-width: 1025px) {
+		width: 20%;
+	}
+
+	@media (max-width: 800px) {
+		width: 25%;
+	}
+
+	@media (max-width: 450px) {
+		width: 40%;
+	}
 `;
 
 const Items = styled.li`
 	font-size: 1.3rem;
-	color: ${theme.white};
 
+	& > a {
+		color: ${theme.white};
+		text-decoration: none;
+	}
 	:hover {
 		transform: scale(1.2);
 		transition: 300ms ease-in-out;
 		cursor: pointer;
+	}
+
+	@media (max-width: 800px) {
+		font-size: 1rem;
+	}
+`;
+
+const SearchBar = styled.input`
+	background-color: transparent;
+	border: 2px solid ${theme.white};
+	border-radius: 5rem;
+	color: ${theme.white};
+	font-size: 1.2rem;
+	padding: 0.5rem 1.5rem;
+
+	:focus {
+		outline: none;
 	}
 `;
 
@@ -57,6 +90,7 @@ const Movie = styled.div`
 	width: 15rem;
 	margin: 1rem;
 	margin-bottom: 6rem;
+	cursor: pointer;
 
 	:hover {
 		margin-top: -0.2rem;
@@ -169,4 +203,5 @@ export {
 	Menu,
 	Items,
 	PageContainer,
+	SearchBar,
 };
