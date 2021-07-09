@@ -48,19 +48,6 @@ const Items = styled.li`
 	}
 `;
 
-const SearchBar = styled.input`
-	background-color: transparent;
-	border: 2px solid ${theme.white};
-	border-radius: 5rem;
-	color: ${theme.white};
-	font-size: 1.2rem;
-	padding: 0.5rem 1.5rem;
-
-	:focus {
-		outline: none;
-	}
-`;
-
 // Home page elements
 const FilmContainer = styled.div`
 	display: flex;
@@ -160,26 +147,92 @@ const GenresTitle = styled.h2`
 	}
 `;
 
+const InfoMovie = styled.div`
+	position: absolute;
+	display: flex;
+	justify-self: flex-start;
+	background-color: ${theme.black};
+	opacity: 0.8;
+	width: 100%;
+`;
+
+// Hero components
 const HeroContainer = styled.div`
 	display: flex;
 	position: relative;
 	width: 100%;
 	height: 70rem;
+
+	@media (max-width: 800px) {
+		height: 50rem;
+	}
+
+	@media (max-width: 450px) {
+		height: 30rem;
+	}
 `;
 
 const HeroImage = styled.img`
 	width: 100%;
-	background-color: ${theme.green};
-	background-image: linear-gradient(transparent, black);
+	background: no-repeat;
+	background: fixed center;
+	background-size: cover;
+	background: linear-gradient(transparent, ${theme.black});
 `;
 
 const HeroInfo = styled.div`
 	position: absolute;
-	width: 50rem;
+	width: 50%;
 	height: 18rem;
 	margin-top: 20rem;
 	margin-left: 10rem;
-	border: 2px solid ${theme.white};
+
+	@media (max-width: 800px) {
+		margin-top: 15rem;
+		width: 40%;
+		height: 12rem;
+	}
+
+	@media (max-width: 450px) {
+		margin-top: 10rem;
+		margin-left: 5rem;
+		width: 60%;
+	}
+`;
+
+const HeroTitle = styled.h1`
+	color: ${theme.white};
+	font-size: 8rem;
+
+	@media (max-width: 1025px) {
+		font-size: 5rem;
+	}
+
+	@media (max-width: 800px) {
+		font-size: 3rem;
+	}
+
+	@media (max-width: 450px) {
+		font-size: 2rem;
+	}
+`;
+
+const HeroSubtitle = styled.p`
+	color: ${theme.white};
+	font-size: 2rem;
+	margin-bottom: 2rem;
+
+	@media (max-width: 1025px) {
+		font-size: 1.5rem;
+	}
+
+	@media (max-width: 800px) {
+		font-size: 1rem;
+	}
+
+	@media (max-width: 450px) {
+		font-size: 0.8rem;
+	}
 `;
 
 //movies, series, kids container
@@ -187,6 +240,79 @@ const PageContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+`;
+
+//Butons
+const PlayMovie = styled.button`
+	width: 10rem;
+	padding: 1rem 2rem;
+	font-size: 1rem;
+	font-weight: bold;
+	color: ${theme.white};
+	background-color: ${theme.green};
+	border: none;
+	border-radius: 3rem;
+
+	:hover {
+		transform: scale(1.1);
+		transition: 0.2s ease-in-out;
+		box-shadow: 0.1rem 0.5rem 1rem ${theme.black};
+	}
+
+	@media (max-width: 800px) {
+		width: 8rem;
+		font-size: 0.7rem;
+	}
+`;
+
+const Left = styled.button`
+	position: absolute;
+	margin-top: 30rem;
+	margin-left: 1rem;
+	width: 5rem;
+	height: 5rem;
+	padding: 1rem;
+	background-color: ${theme.black};
+	border: none;
+	opacity: 0.5;
+	color: ${theme.white};
+	border-radius: 50%;
+
+	@media (max-width: 800px) {
+		margin-top: 20rem;
+	}
+
+	@media (max-width: 450px) {
+		width: 3rem;
+		height: 3rem;
+		margin-top: 15rem;
+		font-size: 0.8rem;
+	}
+`;
+
+const Right = styled.button`
+	position: absolute;
+	margin-top: 30rem;
+	margin-left: -6rem;
+	width: 5rem;
+	height: 5rem;
+	padding: 1rem;
+	background-color: ${theme.black};
+	border: none;
+	opacity: 0.5;
+	color: ${theme.white};
+	border-radius: 50%;
+
+	@media (max-width: 800px) {
+		margin-top: 20rem;
+	}
+
+	@media (max-width: 450px) {
+		width: 3rem;
+		height: 3rem;
+		margin-top: 15rem;
+		font-size: 0.8rem;
+	}
 `;
 
 export {
@@ -203,5 +329,10 @@ export {
 	Menu,
 	Items,
 	PageContainer,
-	SearchBar,
+	HeroTitle,
+	HeroSubtitle,
+	PlayMovie,
+	Left,
+	Right,
+	InfoMovie,
 };

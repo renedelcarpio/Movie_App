@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { FilmContainer, Movie, Image, Info, InfoContainer } from './elements';
+import {
+	FilmContainer,
+	Movie,
+	Image,
+	Info,
+	InfoContainer,
+	InfoMovie,
+} from './elements';
 
-const url = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_TMDB_API_KEY}`;
+const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=1`;
 
 const movieImage = 'https://image.tmdb.org/t/p/w154';
 

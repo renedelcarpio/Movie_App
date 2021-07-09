@@ -8,7 +8,7 @@ import {
 } from '../components/elements';
 
 const url = `
-https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=50&with_watch_monetization_types=flatrate`;
+https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=1`;
 
 const movieImage = 'https://image.tmdb.org/t/p/w154';
 
@@ -26,17 +26,19 @@ const Series = () => {
 
 	return (
 		<PageContainer>
-			{serie.map((film) => {
-				return (
-					<Movie>
-						<Image src={movieImage + film.poster_path} />
-						<InfoContainer>
-							<Info>{film.title}</Info>
-							<Info>{film.vote_average}</Info>
-						</InfoContainer>
-					</Movie>
-				);
-			})}
+			{serie
+				.filter((film) => film.poster_path)
+				.map((film) => {
+					return (
+						<Movie>
+							<Image src={movieImage + film.poster_path} />
+							<InfoContainer>
+								<Info>{film.title}</Info>
+								<Info>{film.vote_average}</Info>
+							</InfoContainer>
+						</Movie>
+					);
+				})}
 		</PageContainer>
 	);
 };
