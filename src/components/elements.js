@@ -177,7 +177,6 @@ const HeroImage = styled.img`
 	background: no-repeat;
 	background: fixed center;
 	background-size: cover;
-	background: linear-gradient(transparent, ${theme.black});
 `;
 
 const HeroInfo = styled.div`
@@ -281,6 +280,7 @@ const GenresItem = styled.div`
 	max-height: 20rem;
 	background-color: gray;
 	border-radius: 1rem;
+	cursor: pointer;
 	z-index: 100;
 
 	:hover {
@@ -348,6 +348,7 @@ const GenreQty = styled.p`
 //Butons
 const PlayMovie = styled.button`
 	width: 10rem;
+	margin-right: 1rem;
 	padding: 1rem 2rem;
 	font-size: 1rem;
 	font-weight: bold;
@@ -355,6 +356,7 @@ const PlayMovie = styled.button`
 	background-color: ${theme.green};
 	border: none;
 	border-radius: 3rem;
+	cursor: pointer;
 
 	:hover {
 		transform: scale(1.1);
@@ -383,6 +385,12 @@ const Left = styled.button`
 	color: ${theme.white};
 	border-radius: 50%;
 	text-align: center;
+	cursor: pointer;
+
+	:active {
+		width: 4rem;
+		height: 4rem;
+	}
 
 	@media (max-width: 800px) {
 		margin-top: 20rem;
@@ -411,6 +419,12 @@ const Right = styled.button`
 	color: ${theme.white};
 	border-radius: 50%;
 	text-align: center;
+	cursor: pointer;
+
+	:active {
+		width: 4rem;
+		height: 4rem;
+	}
 
 	@media (max-width: 800px) {
 		margin-top: 20rem;
@@ -424,6 +438,14 @@ const Right = styled.button`
 		margin-left: -4rem;
 		font-size: 0.8rem;
 	}
+`;
+
+// Footer components
+const FooterContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 1rem;
 `;
 
 export {
@@ -450,4 +472,5 @@ export {
 	GenresItem,
 	Genre,
 	GenreQty,
+	FooterContainer,
 };
