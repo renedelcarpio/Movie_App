@@ -1,4 +1,4 @@
-# Movie App usin The Movie Daba Base API
+# Movie App using The Movie Daba Base API
 ![pc](https://user-images.githubusercontent.com/22604504/125135589-3e22f180-e0d7-11eb-9fae-98c7ce83b49b.jpeg)
 ![tablet](https://user-images.githubusercontent.com/22604504/125135653-5abf2980-e0d7-11eb-8abf-85656b510fa5.jpeg)
 ![mobile](https://user-images.githubusercontent.com/22604504/125135676-66125500-e0d7-11eb-8637-b8b691221ace.jpeg)
