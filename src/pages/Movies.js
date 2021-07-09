@@ -28,13 +28,15 @@ const Movies = () => {
 		<PageContainer>
 			{movie.map((film) => {
 				return (
-					<Movie>
-						<Image src={movieImage + film.poster_path} />
-						<InfoContainer>
-							<Info>{film.title}</Info>
-							<Info>{film.vote_average}</Info>
-						</InfoContainer>
-					</Movie>
+					<>
+						<Movie>
+							<Image src={movieImage + film.poster_path} />
+							<InfoContainer>
+								<Info>{film.title}</Info>
+								<Info>{film.vote_average}</Info>
+							</InfoContainer>
+						</Movie>
+					</>
 				);
 			})}
 		</PageContainer>

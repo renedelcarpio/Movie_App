@@ -18,28 +18,53 @@ const Hero = () => {
 	const [hero, setHero] = useState([]);
 
 	useEffect(() => {
-		console.log(hero);
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data);
 				setHero(data.results);
 			});
 	}, []);
 
+	const [number, setNumber] = useState(0);
+
+	const addNumber = () => {
+		if (number < 19) {
+			setNumber(number + 1);
+		} else {
+			setNumber(number + 0);
+		}
+	};
+
+	const restNumber = () => {
+		if (number > 0) {
+			setNumber(number - 1);
+		} else {
+			setNumber(number - 0);
+		}
+	};
+
+	const back = '<';
+	const rigth = '>';
 	return (
 		<HeroContainer>
-			{hero[1] ? (
+			{hero[number] ? (
 				<>
+					<div>
+						<Left onClick={restNumber}>{back}</Left>
+					</div>
 					<HeroImage
-						key={hero[1].id}
-						src={movieImage + hero[1].backdrop_path}
+						key={hero[number].id}
+						src={movieImage + hero[number].backdrop_path}
 					/>
-					<HeroInfo key={hero[1].id}>
-						<HeroTitle key={hero[1].id}>{hero[1].title}</HeroTitle>
-						<HeroSubtitle key={hero[1].id}>{hero[1].overview}</HeroSubtitle>
+					<HeroInfo>
+						<HeroTitle>{hero[number].title}</HeroTitle>
+						<HeroSubtitle>{hero[number].overview}</HeroSubtitle>
 						<PlayMovie>Play Movie</PlayMovie>
+						<PlayMovie>Other</PlayMovie>
 					</HeroInfo>
+					<div>
+						<Right onClick={addNumber}>{rigth}</Right>
+					</div>
 				</>
 			) : null}
 			);

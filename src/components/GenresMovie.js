@@ -1,10 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { FilmContainer, Movie, Image, Info } from './elements';
+import {
+	GenresContainer,
+	GenresItem,
+	Image,
+	Genre,
+	GenreQty,
+} from './elements';
 
 const url = `
 https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US`;
 
-const movieImage = 'https://image.tmdb.org/t/p/w154';
+const movieImage_0 =
+	'https://image.tmdb.org/t/p/original/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpg';
+const movieImage_1 =
+	'https://image.tmdb.org/t/p/original/xXHZeb1yhJvnSHPzZDqee0zfMb6.jpg';
+const movieImage_2 =
+	'https://image.tmdb.org/t/p/original/3WZb1d2XPfHoaJOFf21cRpcIDaX.jpg';
+const movieImage_3 =
+	'https://image.tmdb.org/t/p/original/A0xW7GgeFQoQmPOn7HcHkBQ5nlb.jpg';
 
 const GenresMovie = () => {
 	const [genres, setGenres] = useState([]);
@@ -13,25 +26,37 @@ const GenresMovie = () => {
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data);
 				setGenres(data.genres);
 			});
 	}, []);
 
 	return (
-		<FilmContainer>
-			{genres.map((film) => {
-				return (
-					<Movie key={film.id}>
-						<Image
-							src={movieImage + film.poster_path}
-							alt={film.original_title}
-						/>
-						<Info>{film.name}</Info>
-					</Movie>
-				);
-			})}
-		</FilmContainer>
+		<GenresContainer>
+			{genres[0] ? (
+				<>
+					<GenresItem key={genres[0].id}>
+						<Image src={movieImage_0} />
+						<Genre>{genres[0].name}</Genre>
+						<GenreQty>96 Titles</GenreQty>
+					</GenresItem>
+					<GenresItem key={genres[1].id}>
+						<Image src={movieImage_1} />
+						<Genre>{genres[1].name}</Genre>
+						<GenreQty>55 Titles</GenreQty>
+					</GenresItem>
+					<GenresItem key={genres[2].id}>
+						<Image src={movieImage_2} />
+						<Genre>{genres[2].name}</Genre>
+						<GenreQty>64 Titles</GenreQty>
+					</GenresItem>
+					<GenresItem key={genres[3].id}>
+						<Image src={movieImage_3} />
+						<Genre>{genres[3].name}</Genre>
+						<GenreQty>35 Titles</GenreQty>
+					</GenresItem>
+				</>
+			) : null}
+		</GenresContainer>
 	);
 };
 

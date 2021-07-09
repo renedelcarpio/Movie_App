@@ -242,6 +242,109 @@ const PageContainer = styled.div`
 	justify-content: center;
 `;
 
+//Genres components
+const GenresContainer = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 90%;
+	margin: auto;
+	margin-top: -12rem;
+	margin-bottom: 3rem;
+	padding: 1rem;
+	height: 22rem;
+	background-color: transparent;
+	overflow: hidden;
+
+	@media (max-width: 1025px) {
+		margin-top: -8rem;
+	}
+
+	@media (max-width: 800px) {
+		width: 100%;
+		height: 22rem;
+		justify-content: space-around;
+		margin-bottom: 1rem;
+	}
+
+	@media (max-width: 450rem) {
+		margin-top: -4rem;
+	}
+`;
+
+const GenresItem = styled.div`
+	display: flex;
+	position: relative;
+	justify-content: center;
+	text-align: center;
+	width: 30rem;
+	max-height: 20rem;
+	background-color: gray;
+	border-radius: 1rem;
+	z-index: 100;
+
+	:hover {
+		transform: scale(1.03);
+		transition: 0.2s ease-in-out;
+		box-shadow: 0.1rem 0.5rem 1rem ${theme.black};
+	}
+
+	@media (max-width: 1025px) {
+		width: 22rem;
+		height: 16rem;
+	}
+
+	@media (max-width: 800px) {
+		width: 18rem;
+	}
+
+	@media (max-width: 450px) {
+		width: 10rem;
+		height: 8rem;
+	}
+`;
+
+const Genre = styled.h1`
+	position: absolute;
+	margin-top: 6rem;
+	font-size: 3rem;
+	color: ${theme.white};
+
+	@media (max-width: 1025px) {
+		margin-top: 5rem;
+	}
+
+	@media (max-width: 800px) {
+		font-size: 2.5rem;
+	}
+
+	@media (max-width: 450px) {
+		font-size: 1.8rem;
+		margin-top: 2rem;
+	}
+`;
+
+const GenreQty = styled.p`
+	position: absolute;
+	margin-top: 10rem;
+	font-size: 1.5rem;
+	color: ${theme.white};
+	opacity: 0.8;
+
+	@media (max-width: 1025px) {
+		margin-top: 9rem;
+	}
+
+	@media (max-width: 800px) {
+		margin-top: 7.5rem;
+	}
+
+	@media (max-width: 450px) {
+		margin-top: 4rem;
+		font-size: 1.2rem;
+	}
+`;
+
 //Butons
 const PlayMovie = styled.button`
 	width: 10rem;
@@ -274,9 +377,12 @@ const Left = styled.button`
 	padding: 1rem;
 	background-color: ${theme.black};
 	border: none;
-	opacity: 0.5;
+	opacity: 0.7;
+	font-size: 3rem;
+	font-weight: bold;
 	color: ${theme.white};
 	border-radius: 50%;
+	text-align: center;
 
 	@media (max-width: 800px) {
 		margin-top: 20rem;
@@ -293,24 +399,29 @@ const Left = styled.button`
 const Right = styled.button`
 	position: absolute;
 	margin-top: 30rem;
-	margin-left: -6rem;
+	margin-left: -8rem;
 	width: 5rem;
 	height: 5rem;
 	padding: 1rem;
 	background-color: ${theme.black};
 	border: none;
-	opacity: 0.5;
+	opacity: 0.7;
+	font-size: 3rem;
+	font-weight: bold;
 	color: ${theme.white};
 	border-radius: 50%;
+	text-align: center;
 
 	@media (max-width: 800px) {
 		margin-top: 20rem;
+		margin-left: -7rem;
 	}
 
 	@media (max-width: 450px) {
 		width: 3rem;
 		height: 3rem;
 		margin-top: 15rem;
+		margin-left: -4rem;
 		font-size: 0.8rem;
 	}
 `;
@@ -335,4 +446,8 @@ export {
 	Left,
 	Right,
 	InfoMovie,
+	GenresContainer,
+	GenresItem,
+	Genre,
+	GenreQty,
 };
