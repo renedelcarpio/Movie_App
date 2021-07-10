@@ -16,7 +16,7 @@ function App() {
 					<Route exact path='/Movies' component={Movies} />
 					<Route exact path='/Series' component={Series} />
 					<Route exact path='/Kids' component={Kids} />
-					<Route exact path='' component={NotFound} />
+					<Route component={NotFound} />
 				</Switch>
 			</Layout>
 		</BrowserRouter>
