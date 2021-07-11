@@ -19,7 +19,6 @@ const Movies = () => {
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data);
 				setMovie(data.results);
 			});
 	}, []);
@@ -29,7 +28,7 @@ const Movies = () => {
 			{movie.map((film) => {
 				return (
 					<>
-						<Movie>
+						<Movie key={film.id}>
 							<Image src={movieImage + film.poster_path} />
 							<InfoContainer>
 								<Info>{film.title}</Info>
