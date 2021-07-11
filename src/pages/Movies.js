@@ -29,7 +29,10 @@ const Movies = () => {
 				return (
 					<>
 						<Movie key={film.id}>
-							<Image src={movieImage + film.poster_path} />
+							<Image
+								src={movieImage + film.poster_path}
+								alt={film.original_name}
+							/>
 							<InfoContainer>
 								<Info>{film.title}</Info>
 								<Info>{film.vote_average}</Info>

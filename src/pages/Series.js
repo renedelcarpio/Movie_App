@@ -19,7 +19,6 @@ const Series = () => {
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data);
 				setSerie(data.results);
 			});
 	}, []);
@@ -30,8 +29,11 @@ const Series = () => {
 				.filter((film) => film.poster_path)
 				.map((film) => {
 					return (
-						<Movie>
-							<Image src={movieImage + film.poster_path} />
+						<Movie key={film.id}>
+							<Image
+								src={movieImage + film.poster_path}
+								alt={film.original_name}
+							/>
 							<InfoContainer>
 								<Info>{film.title}</Info>
 								<Info>{film.vote_average}</Info>

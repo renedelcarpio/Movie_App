@@ -19,7 +19,6 @@ const Kids = () => {
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data);
 				setBaby(data.results);
 			});
 	}, []);
@@ -28,8 +27,11 @@ const Kids = () => {
 		<PageContainer>
 			{baby.map((film) => {
 				return (
-					<Movie>
-						<Image src={movieImage + film.poster_path} />
+					<Movie key={film.id}>
+						<Image
+							src={movieImage + film.poster_path}
+							alt={film.original_name}
+						/>
 						<InfoContainer>
 							<Info>{film.title}</Info>
 							<Info>{film.vote_average}</Info>
