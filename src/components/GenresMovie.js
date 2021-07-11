@@ -35,22 +35,22 @@ const GenresMovie = () => {
 			{genres[0] ? (
 				<>
 					<GenresItem key={genres[0].id}>
-						<Image src={movieImage_0} />
+						<Image src={movieImage_0} alt={genres[0].original_title} />
 						<Genre>{genres[0].name}</Genre>
 						<GenreQty>96 Titles</GenreQty>
 					</GenresItem>
 					<GenresItem key={genres[1].id}>
-						<Image src={movieImage_1} />
+						<Image src={movieImage_1} alt={genres[1].original_title} />
 						<Genre>{genres[1].name}</Genre>
 						<GenreQty>55 Titles</GenreQty>
 					</GenresItem>
 					<GenresItem key={genres[2].id}>
-						<Image src={movieImage_2} />
+						<Image src={movieImage_2} alt={genres[2].original_title} />
 						<Genre>{genres[2].name}</Genre>
 						<GenreQty>64 Titles</GenreQty>
 					</GenresItem>
 					<GenresItem key={genres[3].id}>
-						<Image src={movieImage_3} />
+						<Image src={movieImage_3} alt={genres[3].original_title} />
 						<Genre>{genres[3].name}</Genre>
 						<GenreQty>35 Titles</GenreQty>
 					</GenresItem>

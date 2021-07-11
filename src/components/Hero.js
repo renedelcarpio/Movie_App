@@ -55,6 +55,7 @@ const Hero = () => {
 					<HeroImage
 						key={hero[number].id}
 						src={movieImage + hero[number].backdrop_path}
+						alt={hero[number].original_title}
 					/>
 					<HeroInfo>
 						<HeroTitle>{hero[number].title}</HeroTitle>
