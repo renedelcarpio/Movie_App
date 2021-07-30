@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Menu, Items } from './elements';
 import { MenuItems } from './menuItems';
+import Search from './Search';
 
 const Header = () => {
 	return (
@@ -15,6 +16,7 @@ const Header = () => {
 					);
 				})}
 			</Menu>
+			<Search />
 		</Navbar>
 	);
 };

@@ -8,6 +8,7 @@ const Navbar = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem;
+	color: ${theme.white};
 `;
 
 const Menu = styled.ul`
@@ -46,6 +47,15 @@ const Items = styled.li`
 	@media (max-width: 800px) {
 		font-size: 1rem;
 	}
+`;
+
+const SearchBar = styled.input`
+	padding: 0.1rem;
+	margin-left: 0.5rem;
+	border: 1px solid white;
+	background-color: transparent;
+	border-radius: 2px;
+	color: ${theme.white};
 `;
 
 // Home page elements
@@ -246,81 +256,28 @@ const GenresContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	width: 90%;
+	width: 80%;
 	margin: auto;
-	margin-top: -12rem;
-	margin-bottom: 3rem;
+	margin-top: 3rem;
+	margin-bottom: 5rem;
 	padding: 1rem;
-	height: 22rem;
 	background-color: transparent;
-	overflow: hidden;
-
-	@media (max-width: 1025px) {
-		margin-top: -8rem;
-	}
-
-	@media (max-width: 800px) {
-		width: 100%;
-		height: 22rem;
-		justify-content: space-around;
-		margin-bottom: 1rem;
-	}
-
-	@media (max-width: 450rem) {
-		margin-top: -4rem;
-	}
-`;
-
-const GenresItem = styled.div`
-	display: flex;
-	position: relative;
-	justify-content: center;
-	text-align: center;
-	width: 30rem;
-	max-height: 20rem;
-	background-color: gray;
-	border-radius: 1rem;
-	cursor: pointer;
-	z-index: 100;
-
-	:hover {
-		transform: scale(1.03);
-		transition: 0.2s ease-in-out;
-		box-shadow: 0.1rem 0.5rem 1rem ${theme.black};
-	}
-
-	@media (max-width: 1025px) {
-		width: 22rem;
-		height: 16rem;
-	}
-
-	@media (max-width: 800px) {
-		width: 18rem;
-	}
-
-	@media (max-width: 450px) {
-		width: 10rem;
-		height: 8rem;
-	}
 `;
 
 const Genre = styled.h1`
-	position: absolute;
-	margin-top: 6rem;
-	font-size: 3rem;
+	padding: 1rem 2rem;
+	margin: 0.5rem;
+	font-size: 1.2rem;
+	text-align: center;
 	color: ${theme.white};
+	border: 1px solid ${theme.white};
+	border-radius: 1.2rem;
 
-	@media (max-width: 1025px) {
-		margin-top: 5rem;
-	}
-
-	@media (max-width: 800px) {
-		font-size: 2.5rem;
-	}
-
-	@media (max-width: 450px) {
-		font-size: 1.8rem;
-		margin-top: 2rem;
+	:hover {
+		background-color: ${theme.green};
+		border: 1px solid ${theme.green};
+		transform: scale(1.1);
+		transition: 0.2s ease-in-out;
 	}
 `;
 
@@ -407,7 +364,7 @@ const Left = styled.button`
 const Right = styled.button`
 	position: absolute;
 	margin-top: 30rem;
-	margin-left: -8rem;
+	margin-left: 137rem;
 	width: 5rem;
 	height: 5rem;
 	padding: 1rem;
@@ -426,16 +383,20 @@ const Right = styled.button`
 		height: 4rem;
 	}
 
+	@media (max-width: 1025px) {
+		margin-left: 97rem;
+	}
+
 	@media (max-width: 800px) {
 		margin-top: 20rem;
-		margin-left: -7rem;
+		margin-left: 71rem;
 	}
 
 	@media (max-width: 450px) {
 		width: 3rem;
 		height: 3rem;
 		margin-top: 15rem;
-		margin-left: -4rem;
+		margin-left: 39rem;
 		font-size: 0.8rem;
 	}
 `;
@@ -469,8 +430,8 @@ export {
 	Right,
 	InfoMovie,
 	GenresContainer,
-	GenresItem,
 	Genre,
 	GenreQty,
 	FooterContainer,
+	SearchBar,
 };

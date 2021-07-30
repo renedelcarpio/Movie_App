@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {
 	HeroContainer,
 	HeroImage,
@@ -42,16 +46,13 @@ const Hero = () => {
 			setNumber(number - 0);
 		}
 	};
-
-	const back = '<';
-	const rigth = '>';
 	return (
 		<HeroContainer>
 			{hero[number] ? (
 				<>
-					<div>
-						<Left onClick={restNumber}>{back}</Left>
-					</div>
+					<Left onClick={restNumber}>
+						<FontAwesomeIcon icon={faChevronLeft} />
+					</Left>
 					<HeroImage
 						key={hero[number].id}
 						src={movieImage + hero[number].backdrop_path}
@@ -63,9 +64,9 @@ const Hero = () => {
 						<PlayMovie>Play Movie</PlayMovie>
 						<PlayMovie>Other</PlayMovie>
 					</HeroInfo>
-					<div>
-						<Right onClick={addNumber}>{rigth}</Right>
-					</div>
+					<Right onClick={addNumber}>
+						<FontAwesomeIcon icon={faChevronRight} />
+					</Right>
 				</>
 			) : null}
 			);
