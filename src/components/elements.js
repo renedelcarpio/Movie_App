@@ -377,6 +377,17 @@ const Right = styled.button`
 	}
 `;
 
+// Pagination container
+const PaginationContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	width: 30rem;
+	border-radius: 2rem;
+	color: ${theme.white};
+	background-color: ${theme.gray};
+`;
+
 // Footer components
 const FooterContainer = styled.div`
 	display: flex;
@@ -411,4 +422,5 @@ export {
 	FooterContainer,
 	SearchBar,
 	ArrowContainer,
+	PaginationContainer,
 };
