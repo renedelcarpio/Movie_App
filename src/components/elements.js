@@ -162,7 +162,7 @@ const InfoMovie = styled.div`
 const HeroContainer = styled.div`
 	position: relative;
 	display: flex;
-	max-width: 100%;
+	max-width: 100vw;
 	height: 70rem;
 
 	@media (max-width: 800px) {
@@ -319,17 +319,32 @@ const PlayMovie = styled.button`
 	}
 `;
 
-const Left = styled.button`
+const ArrowContainer = styled.div`
 	position: absolute;
+	display: flex;
+	justify-content: space-between;
 	margin-top: 30rem;
-	margin-left: 1rem;
-	width: 5rem;
-	height: 5rem;
+	width: 100%;
+	padding: 2rem;
+
+	@media (max-width: 800px) {
+		margin-top: 20rem;
+	}
+
+	@media (max-width: 450px) {
+		margin-top: 12rem;
+		padding: 0.5rem;
+	}
+`;
+
+const Left = styled.button`
+	width: 3rem;
+	height: 3rem;
 	padding: 1rem;
 	background-color: ${theme.black};
 	border: none;
 	opacity: 0.7;
-	font-size: 3rem;
+	font-size: 1rem;
 	font-weight: bold;
 	color: ${theme.white};
 	border-radius: 50%;
@@ -339,31 +354,17 @@ const Left = styled.button`
 	:active {
 		width: 4rem;
 		height: 4rem;
-	}
-
-	@media (max-width: 800px) {
-		margin-top: 20rem;
-	}
-
-	@media (max-width: 450px) {
-		width: 3rem;
-		height: 3rem;
-		margin-top: 15rem;
-		font-size: 0.8rem;
 	}
 `;
 
 const Right = styled.button`
-	position: absolute;
-	margin-top: 30rem;
-	margin-left: 137rem;
-	width: 5rem;
-	height: 5rem;
+	width: 3rem;
+	height: 3rem;
 	padding: 1rem;
 	background-color: ${theme.black};
 	border: none;
 	opacity: 0.7;
-	font-size: 3rem;
+	font-size: 1rem;
 	font-weight: bold;
 	color: ${theme.white};
 	border-radius: 50%;
@@ -373,23 +374,6 @@ const Right = styled.button`
 	:active {
 		width: 4rem;
 		height: 4rem;
-	}
-
-	@media (max-width: 1025px) {
-		margin-left: 97rem;
-	}
-
-	@media (max-width: 800px) {
-		margin-top: 20rem;
-		margin-left: 71rem;
-	}
-
-	@media (max-width: 450px) {
-		width: 3rem;
-		height: 3rem;
-		margin-top: 15rem;
-		margin-left: 39rem;
-		font-size: 0.8rem;
 	}
 `;
 
@@ -426,4 +410,5 @@ export {
 	GenreQty,
 	FooterContainer,
 	SearchBar,
+	ArrowContainer,
 };

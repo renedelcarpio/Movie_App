@@ -12,6 +12,7 @@ import {
 	PlayMovie,
 	Left,
 	Right,
+	ArrowContainer,
 } from './elements';
 
 const url = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`;
@@ -50,9 +51,6 @@ const Hero = () => {
 		<HeroContainer>
 			{hero[number] ? (
 				<>
-					<Left onClick={restNumber}>
-						<FontAwesomeIcon icon={faChevronLeft} />
-					</Left>
 					<HeroImage
 						key={hero[number].id}
 						src={movieImage + hero[number].backdrop_path}
@@ -64,9 +62,14 @@ const Hero = () => {
 						<PlayMovie>Play Movie</PlayMovie>
 						<PlayMovie>Other</PlayMovie>
 					</HeroInfo>
-					<Right onClick={addNumber}>
-						<FontAwesomeIcon icon={faChevronRight} />
-					</Right>
+					<ArrowContainer>
+						<Left onClick={restNumber}>
+							<FontAwesomeIcon icon={faChevronLeft} />
+						</Left>
+						<Right onClick={addNumber}>
+							<FontAwesomeIcon icon={faChevronRight} />
+						</Right>
+					</ArrowContainer>
 				</>
 			) : null}
 			);
