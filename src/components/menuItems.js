@@ -1,6 +1,6 @@
 const MenuItems = [
 	{
-		title: 'Home',
+		title: 'Trending',
 		url: '/',
 	},
 	{
@@ -10,10 +10,6 @@ const MenuItems = [
 	{
 		title: 'Series',
 		url: '/Series',
-	},
-	{
-		title: 'Kids',
-		url: '/Kids',
 	},
 ];
 

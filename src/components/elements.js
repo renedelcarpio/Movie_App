@@ -51,10 +51,11 @@ const Items = styled.li`
 
 const SearchBar = styled.input`
 	padding: 0.1rem;
-	margin-left: 0.5rem;
+	padding-left: 1rem;
+	margin-left: 0.8rem;
 	border: 1px solid white;
 	background-color: transparent;
-	border-radius: 2px;
+	border-radius: 1rem;
 	color: ${theme.white};
 `;
 
@@ -67,9 +68,7 @@ const FilmContainer = styled.div`
 	margin: auto;
 	margin-bottom: 3rem;
 	padding: 1rem;
-	height: 28rem;
 	background-color: transparent;
-	overflow: hidden;
 
 	@media (max-width: 800px) {
 		width: 100%;
@@ -90,9 +89,10 @@ const Movie = styled.div`
 	cursor: pointer;
 
 	:hover {
-		margin-top: -0.2rem;
-		transition: 0.3s ease-in-out;
-		opacity: 0.9;
+		transform: scale(1.2);
+		border: 2px solid ${theme.green};
+		border-radius: 1rem;
+		transition: ease-in-out 0.3s;
 	}
 
 	@media (max-width: 800px) {
@@ -108,7 +108,7 @@ const Image = styled.img`
 const InfoContainer = styled.div`
 	background-color: ${theme.black};
 	opacity: 0.5;
-	height: 6rem;
+	height: 8rem;
 	position: absolute;
 	padding: 1rem;
 	bottom: 0;
