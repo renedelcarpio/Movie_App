@@ -11,7 +11,7 @@ const MyListMovie = () => {
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data);
+				//console.log(data);
 				setTrending(data.results);
 			});
 	}, []);
@@ -27,7 +27,7 @@ const MyListMovie = () => {
 						title={film.title || film.name}
 						date={film.first_air_date || film.release_date}
 						media={film.media_type}
-						vote_average={film.vote_average}
+						vote={film.vote_average}
 					/>
 				);
 			})}

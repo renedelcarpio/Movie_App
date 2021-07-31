@@ -5,7 +5,7 @@ import theme from '../theme';
 const Navbar = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	padding: 1rem;
 	color: ${theme.white};
@@ -63,7 +63,7 @@ const SearchBar = styled.input`
 const FilmContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	width: 90%;
 	margin: auto;
 	margin-bottom: 3rem;
@@ -107,8 +107,8 @@ const Image = styled.img`
 
 const InfoContainer = styled.div`
 	background-color: ${theme.black};
-	opacity: 0.5;
-	height: 8rem;
+	opacity: 0.7;
+	height: 10rem;
 	position: absolute;
 	padding: 1rem;
 	bottom: 0;
@@ -128,33 +128,25 @@ const Info = styled.h3`
 	width: 90%;
 	background-color: transparent;
 
+	&.green {
+		color: ${theme.green};
+	}
+
+	&.red {
+		color: ${theme.red};
+	}
+
 	@media (max-width: 800px) {
 		font-size: 1rem;
 	}
 `;
 
 const GenresTitle = styled.h2`
-	margin-left: 12rem;
-	font-size: 1.5rem;
+	text-align: center;
+	font-size: 2rem;
 	font-weight: bold;
 	color: ${theme.white};
-
-	@media (max-width: 1025px) {
-		margin-left: 8rem;
-	}
-
-	@media (max-width: 800px) {
-		margin-left: 4rem;
-		font-size: 1.2rem;
-	}
-
-	@media (max-width: 450px) {
-		margin-left: 5rem;
-	}
-
-	@media (max-width: 376px) {
-		margin-left: 8rem;
-	}
+	margin-bottom: 1rem;
 `;
 
 const InfoMovie = styled.div`
@@ -168,9 +160,9 @@ const InfoMovie = styled.div`
 
 // Hero components
 const HeroContainer = styled.div`
-	display: flex;
 	position: relative;
-	width: 100%;
+	display: flex;
+	max-width: 100%;
 	height: 70rem;
 
 	@media (max-width: 800px) {
