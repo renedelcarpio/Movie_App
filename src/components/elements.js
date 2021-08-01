@@ -385,7 +385,7 @@ const PaginationContainer = styled.div`
 	width: 30rem;
 	border-radius: 2rem;
 	color: ${theme.white};
-	background-color: ${theme.gray};
+	background-color: ${theme.green};
 `;
 
 // Footer components

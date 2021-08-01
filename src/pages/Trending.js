@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { FilmContainer } from './elements';
-import Content from './Content';
-import CustomPagination from './CustomPagination';
+import { FilmContainer } from '../components/elements';
+import Content from '../components/Content';
+import CustomPagination from '../components/CustomPagination';
 
-const MyListMovie = () => {
+const Trending = () => {
 	const [page, setPage] = useState(1);
-	const url = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=${page}`;
 
+	const url = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=${page}`;
 	const [trending, setTrending] = useState([]);
 
 	useEffect(() => {
@@ -39,4 +39,4 @@ const MyListMovie = () => {
 	);
 };
 
-export default MyListMovie;
+export default Trending;

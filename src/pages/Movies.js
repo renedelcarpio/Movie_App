@@ -1,48 +1,42 @@
 import React, { useEffect, useState } from 'react';
-import {
-	Movie,
-	Image,
-	InfoContainer,
-	Info,
-	PageContainer,
-} from '../components/elements';
+import { FilmContainer } from '../components/elements';
+import Content from '../components/Content';
+import CustomPagination from '../components/CustomPagination';
 
-const url = `
-https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=6&with_watch_monetization_types=flatrate`;
+const Movie = () => {
+	const [page, setPage] = useState(1);
 
-const movieImage = 'https://image.tmdb.org/t/p/w154';
-
-const Movies = () => {
-	const [movie, setMovie] = useState([]);
+	const url = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=${page}&with_watch_monetization_types=flatrate`;
+	const [trending, setTrending] = useState([]);
 
 	useEffect(() => {
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
-				setMovie(data.results);
+				//console.log(data);
+				setTrending(data.results);
 			});
-	}, []);
-
+	}, [url, page]);
 	return (
-		<PageContainer>
-			{movie.map((film) => {
-				return (
-					<>
-						<Movie key={film.id}>
-							<Image
-								src={movieImage + film.poster_path}
-								alt={film.original_name}
-							/>
-							<InfoContainer>
-								<Info>{film.title}</Info>
-								<Info>{film.vote_average}</Info>
-							</InfoContainer>
-						</Movie>
-					</>
-				);
-			})}
-		</PageContainer>
+		<>
+			<FilmContainer>
+				{trending.map((film) => {
+					return (
+						<Content
+							key={film.id}
+							id={film.id}
+							poster={film.poster_path}
+							title={film.title || film.name}
+							date={film.first_air_date || film.release_date}
+							media={film.media_type}
+							vote={film.vote_average}
+						/>
+					);
+				})}
+			</FilmContainer>
+			<CustomPagination setPage={setPage} />
+		</>
 	);
 };
 
-export default Movies;
+export default Movie;
