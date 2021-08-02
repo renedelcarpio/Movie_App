@@ -15,7 +15,7 @@ const Menu = styled.ul`
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
-	width: 15%;
+	width: 45%;
 	justify-content: space-around;
 
 	@media (max-width: 1025px) {
@@ -72,7 +72,6 @@ const FilmContainer = styled.div`
 
 	@media (max-width: 800px) {
 		width: 100%;
-		height: 22rem;
 		justify-content: center;
 		margin-bottom: 1rem;
 	}

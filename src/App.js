@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Movies from './pages/Movies';
 import NotFound from './pages/NotFound';
 import Series from './pages/Series';
+import Trending from './pages/Trending';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 					<Route exact path='/' component={Home} />
 					<Route exact path='/Movies' component={Movies} />
 					<Route exact path='/Series' component={Series} />
+					<Route exact path='/Trending' component={Trending} />
 					<Route component={NotFound} />
 				</Switch>
 			</Layout>
