@@ -2,7 +2,7 @@
   "name": "movie_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "renedelcarpio.github.io/Movie_App/public/index.html",
+  "homepage": "http://renedelcarpio.github.io/Movie_App",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
