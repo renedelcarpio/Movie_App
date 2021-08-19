@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/renedelcarpio.github.io/Movie_App/static/css/main.5a3cc2af.chunk.css",
-    "main.js": "/renedelcarpio.github.io/Movie_App/static/js/main.5a37c7b4.chunk.js",
-    "main.js.map": "/renedelcarpio.github.io/Movie_App/static/js/main.5a37c7b4.chunk.js.map",
-    "runtime-main.js": "/renedelcarpio.github.io/Movie_App/static/js/runtime-main.5b7417a2.js",
-    "runtime-main.js.map": "/renedelcarpio.github.io/Movie_App/static/js/runtime-main.5b7417a2.js.map",
-    "static/js/2.0ce40295.chunk.js": "/renedelcarpio.github.io/Movie_App/static/js/2.0ce40295.chunk.js",
-    "static/js/2.0ce40295.chunk.js.map": "/renedelcarpio.github.io/Movie_App/static/js/2.0ce40295.chunk.js.map",
-    "index.html": "/renedelcarpio.github.io/Movie_App/index.html",
-    "static/css/main.5a3cc2af.chunk.css.map": "/renedelcarpio.github.io/Movie_App/static/css/main.5a3cc2af.chunk.css.map",
-    "static/js/2.0ce40295.chunk.js.LICENSE.txt": "/renedelcarpio.github.io/Movie_App/static/js/2.0ce40295.chunk.js.LICENSE.txt"
+    "main.css": "/Movie_App/static/css/main.4ff28198.chunk.css",
+    "main.js": "/Movie_App/static/js/main.5e632e6b.chunk.js",
+    "main.js.map": "/Movie_App/static/js/main.5e632e6b.chunk.js.map",
+    "runtime-main.js": "/Movie_App/static/js/runtime-main.1ab56d8c.js",
+    "runtime-main.js.map": "/Movie_App/static/js/runtime-main.1ab56d8c.js.map",
+    "static/js/2.0df36e32.chunk.js": "/Movie_App/static/js/2.0df36e32.chunk.js",
+    "static/js/2.0df36e32.chunk.js.map": "/Movie_App/static/js/2.0df36e32.chunk.js.map",
+    "index.html": "/Movie_App/index.html",
+    "static/css/main.4ff28198.chunk.css.map": "/Movie_App/static/css/main.4ff28198.chunk.css.map",
+    "static/js/2.0df36e32.chunk.js.LICENSE.txt": "/Movie_App/static/js/2.0df36e32.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b7417a2.js",
-    "static/js/2.0ce40295.chunk.js",
-    "static/css/main.5a3cc2af.chunk.css",
-    "static/js/main.5a37c7b4.chunk.js"
+    "static/js/runtime-main.1ab56d8c.js",
+    "static/js/2.0df36e32.chunk.js",
+    "static/css/main.4ff28198.chunk.css",
+    "static/js/main.5e632e6b.chunk.js"
   ]
 }
